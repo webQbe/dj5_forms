@@ -1,0 +1,17 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <title>Contact Us</title>
+    <link rel="stylesheet" 
+    href="{% static 'styles/styles.css' %}">
+</head>
+<body>
+    <h1>Contact Us</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}} <!--wraps each field in para text-->
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
